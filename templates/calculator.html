@@ -1,0 +1,28 @@
+{%include "header.html" %}
+
+<h1 class="title text-center">Calculator</h1>
+<div class="row g-5">
+    <div class="col-lg-7 wow slideInUp" data-wow-delay="0.3s">
+        <div class="bg-light rounded p-5">
+            <form method= "post">
+            {%csrf_token%}
+               <label for="">Value 1:</label>
+               <input type="text" name="num1" class="form-control">
+               <label for="">Select OPR...</label>
+               <select name="opr" class="form-control">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+               </select>
+               <label for="">Value 2:</label>
+               <input type="text" name="num2" class="form-control">
+              
+               <button type="submit">Calculate</button><br>
+               <label for="">output:</label>
+               <input type="text" value="{{c}}" class="form-control">
+            </form>
+        </div>
+    </div>
+
+{%include "footer.html" %}

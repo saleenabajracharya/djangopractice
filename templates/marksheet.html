@@ -1,0 +1,29 @@
+{%include "header.html" %}
+
+<h1 class="title text-center">Marksheet</h1>
+<div class="row g-5">
+    <div class="col-lg-7 wow slideInUp" data-wow-delay="0.3s">
+        <div class="bg-light rounded p-5">
+            <form method= "post">
+            {%csrf_token%}
+               <label for="">Subject 1:</label>
+               <input type="text" name="num1" class="form-control">
+               <label for="">Subject 2:</label>
+               <input type="text" name="num2" class="form-control">
+               <label for="">Subject 3:</label>
+               <input type="text" name="num3" class="form-control">
+               <label for="">Subject 4:</label>
+               <input type="text" name="num4" class="form-control">
+               <label for="">Subject 5:</label>
+               <input type="text" name="num5" class="form-control">
+               <button type="submit">Calculate</button><br>
+               <label for="">total:</label>
+               <input type="text" value="{{total}}" class="form-control">
+               <label for="">Percentage:</label>
+               <input type="text" value="{{percentage}}" class="form-control"></form>
+               <label for="">Division:</label>
+               <input type="text" value="{{div}}" class="form-control"></form>
+        </div>
+    </div>
+
+{%include "footer.html" %}
